@@ -2,9 +2,7 @@
 
 Presentation video link: https://www.youtube.com/watch?v=c4wheKYBdvg&ab_channel=MartinSten
 
-Dog tracking can be done in multiple ways and one way is for a person to lay a track by walking a distance, for example 500 meters. While walking these 500 meters the person will drop a couple of dumbbells for the dog to find. The track then has to settle for a bit and then the dog gets released into the track and tries to walk the same path while also finding all the dumbbells.
 
-To simplify this process and make it easier for dog owners/trainers we made an app that consists of these features
 - Satellite image view 
 - Possibility to see the track that you laid
 - Mark dumbbells on the map
