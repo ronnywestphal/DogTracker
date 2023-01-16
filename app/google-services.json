@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "963687641954",
+    "firebase_url": "https://dog-tracker-app-e15af-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dog-tracker-app-e15af",
+    "storage_bucket": "dog-tracker-app-e15af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963687641954:android:5543a60f1680929922723b",
+        "android_client_info": {
+          "package_name": "com.davidhalldoff.dogtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963687641954-h6223s01dtuntvbttu3670br1b9bfjkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMy4OFvSJqEkUaYBsgTUKxHWRFxGnXivM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963687641954-h6223s01dtuntvbttu3670br1b9bfjkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963687641954:android:30105ef5cca0f47922723b",
+        "android_client_info": {
+          "package_name": "se.kth.dogtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963687641954-h6223s01dtuntvbttu3670br1b9bfjkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMy4OFvSJqEkUaYBsgTUKxHWRFxGnXivM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963687641954-h6223s01dtuntvbttu3670br1b9bfjkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

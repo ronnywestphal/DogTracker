@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/side_navigation_tracks"
+        android:icon="@drawable/icon_track"
+        android:title="@string/tracks" />
+
+    <item
+        android:id="@+id/side_navigation_dogs"
+        android:icon="@drawable/icon_paw"
+        android:title="@string/dogs" />
+
+    <!--
+    <item
+        android:id="@+id/side_navigation_settings"
+        android:icon="@drawable/icon_settings"
+        android:title="@string/settings" />
+    -->
+    <item
+        android:id="@+id/side_navigation_logout"
+        android:icon="@drawable/icon_logout"
+        android:title="@string/logout" />
+</menu>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/satellite"
+        android:id="@+id/popup_satellite"/>
+    <item
+        android:title="@string/mapbox_streets"
+        android:id="@+id/popup_streets"/>
+    <item
+        android:title="@string/satellite_streets"
+        android:id="@+id/popup_satellite_streets"/>
+    <item
+        android:title="@string/light"
+        android:id="@+id/popup_light"/>
+    <item
+        android:title="@string/dark"
+        android:id="@+id/popup_dark"/>
+
+</menu>

@@ -1,0 +1,80 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">DogTracker</string>
+    <string name="mapbox_access_token" tools:ignore="Typos">sk.eyJ1Ijoicm9ubnl3ZXN0cGhhbCIsImEiOiJjbGJ3NHNsZDUweDBwM3Z0MGQ1ZzlvYjg4In0.ytLhwqk4cb1-GUL3wV59ug</string>
+
+    <string name="start_human">Lay track</string>
+    <string name="start_dog">Track</string>
+    <string name="start">Start</string>
+    <string name="end">End</string>
+    <string name="_0">0</string>
+
+    <string name="distance_default">0 m</string>
+    <string name="distance">%.0f m</string>
+    <string name="time_default">0 m 0 s</string>
+    <string name="time">%d m %d s</string>
+    <string name="avg_speed">%.1f km/h</string>
+    <string name="dumbbells_default">0</string>
+    <string name="dumbbells_human">%d</string>
+    <string name="dumbbells_dog">%d/%d</string>
+
+    <string name="dogs">Dogs</string>
+    <string name="tracks">Tracks</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="default_name">My Buddy!</string>
+    <string name="title_activity_tracks">Tracking</string>
+    <string name="title_activity_dogs">Profiles</string>ß
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="login">Login</string>
+    <string name="register_here">Register here</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login_here">Login here</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="satellite">Satellite</string>
+    <string name="mapbox_streets">Mapbox Streets</string>
+    <string name="satellite_streets">Satellite Streets</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="outdoors">Outdoors</string>
+    <string name="name_default">My Buddy!</string>
+
+    <!-- Map Style Values -->
+    <string name="sp_satellite">mapbox://styles/mapbox/satellite-v9</string>
+    <string name="sp_mapbox_streets">mapbox://styles/mapbox/streets-v11</string>
+    <string name="sp_satellite_streets">mapbox://styles/mapbox/dark-v10</string>
+    <string name="sp_light">mapbox://styles/mapbox/light-v10</string>
+    <string name="sp_dark">mapbox://styles/mapbox/dark-v10</string>
+
+    <string name="profile_tracks_default">0 tracks completed</string>
+    <string name="profile_distance_default">0.0 km tracked</string>
+    <string name="profile_tracks">%d track%s completed</string>
+    <string name="profile_distance">%.2f km tracked</string>
+
+    <string name="distance_title">Distance</string>
+    <string name="time_title">Time</string>
+    <string name="dumbbells_found">Dumbbells Found</string>
+
+    <string name="track_name">%s with %s</string>
+    <string name="track_stats">%.0f meters &#160;&#160;&#160; %d m %d s &#160;&#160;&#160; %d/%d dumbbells</string>
+    <string name="average_speed">Avg Speed</string>
+    <string name="weather">Weather</string>
+
+
+</resources>

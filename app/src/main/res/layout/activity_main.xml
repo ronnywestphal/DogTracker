@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context="se.kth.dogtracker.MainActivity"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mapbox.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            mapbox:mapbox_cameraZoom="3"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:src="@drawable/icon_menu"
+                android:stateListAnimator="@null"
+                android:tint="@color/theme_500"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_distance"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"
+                android:text="@string/distance_default"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:stateListAnimator="@null"
+                android:elevation="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="2.5dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_time"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"
+                android:text="@string/time_default"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:stateListAnimator="@null"
+                android:elevation="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="2.5dp">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_dumbbells"
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_corners"
+                android:text="@string/dumbbells_default"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:stateListAnimator="@null"
+                android:elevation="5dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="2.5dp"
+                android:layout_marginEnd="10dp">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_start_human"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_start_human"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_human"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_end_human,button_pause,button_resume,button_marker"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_start_dog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_start_dog"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_dog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_end_dog,button_found,button_missed"/>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_dumbbell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="button_found,button_missed"/>
+
+        <!--HUMAN-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_start_human"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/start_human"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_end_human"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_corners"
+            android:text="@string/end"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+
+            android:stateListAnimator="@null"
+            android:elevation="5dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_resume"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:src="@drawable/icon_start"
+            android:stateListAnimator="@null"
+            android:tint="@color/theme_500"
+            app:layout_constraintBottom_toBottomOf="@+id/button_end_human"
+            app:layout_constraintEnd_toStartOf="@+id/button_end_human"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_end_human"
+            tools:ignore="DuplicateClickableBoundsCheck,SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_pause"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:src="@drawable/icon_pause"
+            android:stateListAnimator="@null"
+            android:tint="@color/theme_500"
+            app:layout_constraintBottom_toBottomOf="@+id/button_end_human"
+            app:layout_constraintEnd_toStartOf="@+id/button_end_human"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_end_human"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_marker"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/white"
+            android:elevation="5dp"
+            android:src="@drawable/icon_dumbbell"
+            android:stateListAnimator="@null"
+            android:tint="@color/theme_500"
+            app:layout_constraintBottom_toBottomOf="@+id/button_end_human"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_end_human"
+            app:layout_constraintTop_toTopOf="@+id/button_end_human"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!--DOG-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_start_dog"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/start_dog"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_end_dog"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/rounded_corners"
+            android:elevation="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/end"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateClickableBoundsCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_missed"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/marker_missed"
+            android:elevation="5dp"
+            android:src="@drawable/icon_dumbbell"
+            android:stateListAnimator="@null"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button_end_dog"
+            app:layout_constraintEnd_toStartOf="@+id/button_end_dog"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_end_dog"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_found"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/marker_found"
+            android:elevation="5dp"
+            android:src="@drawable/icon_dumbbell"
+            android:stateListAnimator="@null"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button_end_dog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_end_dog"
+            app:layout_constraintTop_toTopOf="@+id/button_end_dog"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/extra_buttons_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="150dp">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_select_map"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:src="@drawable/icon_layers"
+                android:tint="@color/theme_500"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_center_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/white"
+                android:elevation="5dp"
+                android:src="@drawable/icon_location"
+                android:tint="@color/theme_500"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/navigation_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="?android:colorBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:background="@color/theme_500"
+                    android:elevation="20dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_selected_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="@string/default_name"
+                    android:gravity="bottom|center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/rounded_corners"
+                android:tint="@color/theme_700"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_selected_profile_pic"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/empty_profile_picture"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/side_navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu="@menu/side_navigation"
+            app:itemIconTint="@color/theme_500"
+            app:itemTextColor="@color/text_grey"
+            app:elevation="0dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.drawerlayout.widget.DrawerLayout>
